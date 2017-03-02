@@ -12,7 +12,6 @@ class App extends Component {
             METEOR SHOWER FUNTIME SENSATIONALISM
           </p>
         </div>
-          <p className="input"></p>
           <UserInput/>
     </div>
 
