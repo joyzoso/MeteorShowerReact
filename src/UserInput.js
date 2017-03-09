@@ -6,9 +6,7 @@ export default class UserInput extends Component {
     super(props)
     this.state = {
       value: '',
-      forecast: {
-        forecast: []
-      },
+      forecast: {},
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,6 +23,12 @@ export default class UserInput extends Component {
     handleChange(event) {
       this.setState({value: event.target.value});
   }
+
+  // getInitialState() {
+  //   return {
+  //
+  //   }
+  // }
 
   getWeather () {
     let self = this;
@@ -59,12 +63,11 @@ export default class UserInput extends Component {
 
 
     render() {
-      const { forecast } = this.state;
       return (
 
       <div>
         <div>
-        <h1>{forecast.name}</h1>
+        <h1>{this.state.forecast.name}</h1>
       </div>
         <form className="input" onSubmit={this.handleSubmit}>
           <label>
