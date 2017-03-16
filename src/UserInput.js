@@ -25,24 +25,25 @@ export default class UserInput extends Component {
       this.setState({value: event.target.value});
   }
 
-    componentWillMount() {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?zip=97231,us&APPID=313186e768d1b0e1e4e192f966703b6e')
-        .then((response) => {
-          console.log(response.data.weather[0].description);
-          this.setState ({
-            forecast : {
-              // main: response.weather[0].main,
-              description: response.data.weather[0].description,
-              // temp: response.main.temp
-            }
+
+      componentWillMount() {
+          axios.get('http://api.openweathermap.org/data/2.5/weather?zip=97231,us&APPID=313186e768d1b0e1e4e192f966703b6e')
+          .then((response) => {
+            console.log(response.data.weather[0].description);
+            this.setState ({
+              forecast : {
+                // main: response.weather[0].main,
+                description: response.data.weather[0].description,
+                // temp: response.main.temp
+              }
+              })
             })
+
+          .catch((error) => {
+            console.warn(error);
           })
+        }
 
-
-        .catch((error) => {
-          console.warn(error);
-        })
-      }
 
 
 
