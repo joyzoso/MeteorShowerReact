@@ -16,10 +16,6 @@ class App extends Component {
         </div>
           <UserInput/>
           {/* <p className="date"></p> */}
-
-
-
-
         {/* <Date/> */}
 
           <Footer/>

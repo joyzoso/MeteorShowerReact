@@ -7,11 +7,13 @@ export default class UserInput extends Component {
     super(props)
     this.state = {
       value: '',
+      zip: '',
       forecast: {},
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
 
 
 
@@ -19,21 +21,25 @@ export default class UserInput extends Component {
 
     handleSubmit(event) {
       event.preventDefault();
+      console.log('dsds');
+      this.setState({})
     }
 
-    handleChange(event) {
-      this.setState({value: event.target.value});
-  }
+
+    handleInput(event) {
+      this.setState({zip: event.target.value});
+    }
 
 
-      componentWillMount() {
-          axios.get('http://api.openweathermap.org/data/2.5/weather?zip=97231,us&APPID=313186e768d1b0e1e4e192f966703b6e')
+      handleChange() {
+          axios.get('http://api.openweathermap.org/data/2.5/weather?zip=' + this.state.zip + ',us&APPID=313186e768d1b0e1e4e192f966703b6e')
           .then((response) => {
-            console.log(response.data.weather[0].description);
+            console.log(response.data.weather[0].icon);
             this.setState ({
               forecast : {
                 // main: response.weather[0].main,
                 description: response.data.weather[0].description,
+                icon: "http://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png",
                 // temp: response.main.temp
               }
               })
@@ -55,20 +61,27 @@ export default class UserInput extends Component {
 
       // Why is this.state still undefined and trying to render everything below here
       return (
-
+<div>
       <div>
         <div>
         <h1>{this.state.forecast.description}</h1>
+        <img src={this.state.forecast.icon}/>
+
       </div>
         <form className="input" onSubmit={this.handleSubmit}>
           <label>
             Enter Your Zipcode
             <br></br>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.state.zip} onChange={this.handleInput} />
           </label>
-          <input type="submit" value="Submit" />
+          <button onClick={this.handleChange} value="Submit">Submit</button>
         </form>
         </div>
+
+        <div>
+          <h3>{this.state.forecast.description}</h3>
+        </div>
+      </div>
       );
 
     }
