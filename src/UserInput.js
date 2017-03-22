@@ -9,6 +9,7 @@ export default class UserInput extends Component {
       value: '',
       zip: '',
       forecast: {},
+      message: '',
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,12 +23,16 @@ export default class UserInput extends Component {
     handleSubmit(event) {
       event.preventDefault();
       console.log('dsds');
-      this.setState({})
+      this.setState({
+        message: 'the current weather is'
+      })
     }
 
 
     handleInput(event) {
-      this.setState({zip: event.target.value});
+      this.setState({
+        zip: event.target.value
+      });
     }
 
 
@@ -63,7 +68,8 @@ export default class UserInput extends Component {
       return (
 <div>
       <div>
-        <div>
+        <div className="forecast">
+          <h1>{this.state.message}</h1>
         <h1>{this.state.forecast.description}</h1>
         <img src={this.state.forecast.icon}/>
 
@@ -76,10 +82,6 @@ export default class UserInput extends Component {
           </label>
           <button onClick={this.handleChange} value="Submit">Submit</button>
         </form>
-        </div>
-
-        <div>
-          <h3>{this.state.forecast.description}</h3>
         </div>
       </div>
       );

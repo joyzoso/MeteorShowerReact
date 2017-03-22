@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import UserInput from './UserInput';
 import Footer from './Footer';
+import Meteors from './Meteors';
 // import Date from './Date';
 
 class App extends Component {
