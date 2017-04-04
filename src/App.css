@@ -27,7 +27,34 @@
   text-align: center;
 }
 .footer {
+  /*position: absolute;
+  /*right: 0;
+  bottom: 0;
+  left: 0;*/
+  padding: 1rem;
+  background-color: #efefef;
   text-align: center;
+
+}
+
+.info {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  font-size: x-large;
+}
+.table {
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+}
+
+.fullTable {
+  margin:0 auto;
 }
 
 @keyframes App-logo-spin {

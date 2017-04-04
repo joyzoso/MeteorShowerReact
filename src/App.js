@@ -3,7 +3,8 @@ import './App.css';
 import UserInput from './UserInput';
 import Footer from './Footer';
 import Meteors from './Meteors';
-// import Date from './Date';
+import Date from './Date';
+
 
 class App extends Component {
   render() {
@@ -11,16 +12,17 @@ class App extends Component {
       <div>
         <div className="App">
             <h2>METEOR SHOWER APP</h2>
-          <p className="App-intro">
-            METEOR SHOWER FUNTIME SENSATIONALISM
-          </p>
-        </div>
+             <p className="App-intro">
+                METEOR SHOWER FUNTIME SENSATIONALISM
+            </p>
+         </div>
+          <Date/>
           <UserInput/>
-          {/* <p className="date"></p> */}
-        {/* <Date/> */}
-
+          <br></br>
+          <Meteors/>
+          <br></br>
           <Footer/>
-    </div>
+     </div>
 
     );
   }
