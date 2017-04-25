@@ -1,4 +1,4 @@
-export const showers = {
+export const SHOWERS = {
   showers:[
       {date: "April", event: "Lyrids", peak: "4/11 - 4/22"},
       {date: "May", event: "Eta Aquarids", peak: "4/19 - 4/26"},
@@ -10,6 +10,5 @@ export const showers = {
       {date: "November", event: "Leonids", peak: "11/17 - 11/18"},
       {date: "December", event: "Geminids", peak: "12/13 - 12/14"},
       {date: "December", event: "Ursids", peak: "12/21 - 12/22"},
-
       ]
   }

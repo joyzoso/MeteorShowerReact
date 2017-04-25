@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
-import { showers } from './Constants';
+import { SHOWERS } from './Constants';
 
 
 export default class Meteors extends Component {
   constructor(props) {
     super(props);
 
-    this.state = showers;
-
-      this.showShowers = this.showShowers.bind(this);
-
-    }
+    this.state = SHOWERS;
+    this.showShowers = this.showShowers.bind(this);
+  }
 
 
-    showShowers(showers) {
-      this.setState({
-        showers: {
-          date: showers.date,
-          event: showers.event,
-          peak: showers.peak,
-          }
-      });
-    }
+  showShowers(showers) {
+    this.setState({
+      showers: {
+        date: showers.date,
+        event: showers.event,
+        peak: showers.peak,
+        }
+    });
+  }
 
 
 //probably unnecessary breaks for the table below and on lines 52, 53 aka find better way
