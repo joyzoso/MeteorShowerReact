@@ -1,6 +1,6 @@
 export const SHOWERS = {
   showers:[
-      {date: "April", event: "Lyrids", peak: "4/11 - 4/22"},
+      {date: "April", event: "Lyrids", peakStart: "4/11", peakEnd: "4/22"},
       {date: "May", event: "Eta Aquarids", peak: "4/19 - 4/26"},
       {date: "July ", event: "Alpha Capricornids", peak: "7/26 - 7/27"},
       {date: "August", event: "Perseids", peak: "8/11 - 8/12"},
@@ -12,3 +12,5 @@ export const SHOWERS = {
       {date: "December", event: "Ursids", peak: "12/21 - 12/22"},
       ]
   }
+
+//use momentrange (loop through to rerturn based on range)
