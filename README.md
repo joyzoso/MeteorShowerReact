@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Meteor Shower App 
+Version 1.1 January 2017
+
+## Description
+This application allows a user to to fetch the current weather based on their location.  App will also display the next astronomical event based on the date object.  A message will display based on the weather forecast telling the user if they will have clear skies or not for the event.
+
+## Technologies Used
+- React
+- Axios
+- Bootstrap
+
+
+
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
