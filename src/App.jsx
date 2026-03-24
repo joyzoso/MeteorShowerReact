@@ -299,9 +299,8 @@ function APODCard({ apod }) {
         <div style={{...CARD,padding:0,overflow:"hidden"}}>
           {apod.media_type==="image"
             ? <img src={apod.url} alt={apod.title} style={{width:"100%",height:155,objectFit:"cover",display:"block"}}/>
-            : <div style={{height:155,background:"rgba(255,255,255,.03)",display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <span style={{fontSize:11,color:"#475569"}}>📹 {apod.title}</span>
-              </div>
+            : <iframe src={apod.url} title={apod.title} allowFullScreen
+                style={{width:"100%",height:155,border:"none",display:"block",background:"#000"}}/>
           }
           <div style={{padding:"14px 16px"}}>
             <div style={LABEL}>NASA · Picture of the day</div>
