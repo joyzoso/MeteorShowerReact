@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 
 const OWM_KEY  = "1290565aa718de2bd3044b1c6b79ec2b";
-const NASA_KEY = "DEMO_KEY"; // Free key at api.nasa.gov — 30 calls/hr with DEMO_KEY
+const NASA_KEY = import.meta.env.VITE_NASA_KEY;
 const OWM      = "https://api.openweathermap.org";
 
 // ── Meteor showers ─────────────────────────────────────────────────────────
